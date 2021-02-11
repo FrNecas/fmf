@@ -114,6 +114,8 @@ class TestTree(object):
         with pytest.raises(utils.MergeError):
             child.data["time+"] = "string"
             child.inherit()
+        foo_child = self.merge.find('/parent/inner_plus')
+        assert(foo_child.data['foo'] == {'bar': 'value'})
 
     def test_merge_minus(self):
         """ Reducing attributes using the '-' suffix """

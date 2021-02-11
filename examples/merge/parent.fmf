@@ -35,3 +35,7 @@ very:
                 x+: 1
                 y-: 1
                 z: 0
+
+/inner_plus:
+    foo+:
+        bar+: value
